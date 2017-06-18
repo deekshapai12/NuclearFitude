@@ -24,14 +24,9 @@ public class DataBaseHandler extends SQLiteOpenHelper{
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    @Override
-    public void onCreate(SQLiteDatabase db){
-
-    }
 
     @Override
-    public void onOpen(SQLiteDatabase db) {
-        db.execSQL("DROP TABLE IF EXISTS User");
+    public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS User ("
                 +"userId INTEGER PRIMARY KEY AUTOINCREMENT,"
                 +"userName TEXT,"
@@ -54,22 +49,22 @@ public class DataBaseHandler extends SQLiteOpenHelper{
                 +"eventLatitude DOUBLE,"
                 +"eventLongitude DOUBLE);");
 
-        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('log@app.com','12345','App',22,'M','A+',183,75,'T',1234,5.347);");
-        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('abc@def.com','54321','Abc',34,'F','A-',192,87,'F',2341,100.234);");
-        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('dp@tt.com','dptt1234','Deepika',21,'F','O+',168,41,'F',199,0.253);");
-        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('wii@nin.com','switch10','Wii',21,'M','A+',174,68,'F',3214,240.322);");
-        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('ak@pt.com','pikachu','Ash',15,'M','AB+',156,50,'F',2645,245.544);");
+        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('mrerikson@hotmail.com','12345','Marshall',22,'M','A+',183,75,'T',1234,5.347);");
+        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('sheila122@yahaoo.com','54321','Sheila',34,'F','A-',192,87,'F',2341,100.234);");
+        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('deepika12@gmail.com','dptt1234','Deepika',21,'F','O+',168,41,'F',199,0.253);");
+        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('sharman1512@gmail.com','switch10','Sharman',21,'M','A+',174,68,'F',3214,240.322);");
+        db.execSQL("INSERT INTO User(userName,password,name,age,gender,bloodGroup,height,weight,isDiabetic,fitnessScore,totalCaloriesBurnt) VALUES ('raj22@gmail.com','pikachu','Rajesh',15,'M','AB+',156,50,'F',2645,245.544);");
 
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
-//        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ()");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('10k Marathon','Participate in the 10k Marathon and get fit','19-06-2017',12.9260308,77.6762463)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Walk-a-thon','Heard of Marathon, this Walk-a-thon is for those who want to take it slow','19-06-2017',12.94345157,77.61007103)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Talk-and-Walk','Get into groups, the more the merrier, exercise and have fun','19-06-2017',12.87671028,77.7501675)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Weekend Cycling Ride','Get out your cycles, and join us in the weekly cycle ride for this weekend','19-06-2017',12.93690897,77.68066994)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Yoga Training','Get trained in all the basic asanas, and realize a new feeling to life','19-06-2017',13.14788021,77.61110278)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Zumba Dance Fiesta','Dance.Music.Exercise.Fun.','19-06-2017',12.92267247,77.73961346)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Salsa Class','Sway your way to a fit future','19-06-2017',12.93513202,77.73962587)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Snap Fitness','Attend this event and meet other like-minded fitness people','19-06-2017',13.00287603,77.80151948)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Urban Stampede','What do you get when you mix special discount prizes for winners and a lot of people? An Urban stampede','19-06-2017',13.1390609,77.73688365)");
+        db.execSQL("INSERT INTO Event(eventName, eventDescription, eventDate, eventLatitude, eventLongitude) VALUES ('Sports Triumph Cricket Tournament','Gather your team, and show off your team skills in this game of cricket','19-06-2017',13.07467524,77.86097321)");
 
     }
 

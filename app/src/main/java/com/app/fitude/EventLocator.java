@@ -59,12 +59,13 @@ public class EventLocator extends FragmentActivity implements OnMapReadyCallback
         }
         DataBaseHandler dh = new DataBaseHandler(this);
         eventList = dh.getNearbyEventsList(latitude,longitude);
-        eventList.add(new Events(1,"something random","description","date",12.9240655,77.68842040000001));
+//        eventList.add(new Events(1,"something random","description","date",12.9240655,77.68842040000001));
         mMap = googleMap;
         for(Events event : eventList){
             LatLng location = new LatLng(event.getEventLatitude(),event.getEventLongitude());
             mMap.addMarker(new MarkerOptions().position(location).title(event.getEventName()));
         }
+        mMap.setMyLocationEnabled(true);
         CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(latitude,longitude), 10);
         mMap.animateCamera(cameraUpdate);
     }

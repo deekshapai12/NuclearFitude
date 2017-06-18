@@ -37,22 +37,18 @@ public class LoginActivity extends Activity {
                 String emailAddress = u.getText().toString();
                 String password = p.getText().toString();
 
-//                if(emailAddress.equals("app@log.com") && password.equals("12345") )
-//                {
-//                    String msg ="";
-//                    e.setText(msg);
-//                    Intent intent = new Intent(LoginActivity.this,LoadingScreen.class);
-//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    getApplicationContext().startActivity(intent);
-//                }
-//                else
-//                {
-//                    String msg ="Wrong Email or Password !";
-//                    e.setText(msg);
-//                }
-                Intent intent = new Intent(LoginActivity.this,LoadingScreen.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                getApplicationContext().startActivity(intent);
+                if(emailAddress.equals("app@log.com") && password.equals("12345") )
+                {
+                    String msg ="";
+                    e.setText(msg);
+                    Intent intent = new Intent(LoginActivity.this,LoadingScreen.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getApplicationContext().startActivity(intent);
+                }
+                else {
+                    String msg = "Wrong Email or Password !";
+                    e.setText(msg);
+                }
 
             }
         });
