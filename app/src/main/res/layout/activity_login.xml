@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="1024dp"
+        android:layout_height="150dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Login to Fitude"
+        android:gravity="center"
+        android:id="@+id/textView6"
+        android:background="#ff0099cc"
+        android:textColor="#fafafa"
+        android:textSize="30dp"
+        android:layout_weight="0.30" />
+
+    <EditText
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="example@xyz.com"
+        android:gravity="center"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:layout_above="@+id/editText7"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="367dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Enter Password"
+        android:gravity="center"
+        android:ems="10"
+        android:id="@+id/editText7"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/editText6"
+        android:layout_alignStart="@+id/editText6"
+        android:layout_alignRight="@+id/editText6"
+        android:layout_alignEnd="@+id/editText6" />
+
+    <Button
+        android:layout_width="295dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:text="login"
+        android:id="@+id/login"
+        android:layout_weight="0.16"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/editText7"
+        android:layout_alignRight="@+id/editText7"
+        android:layout_alignEnd="@+id/editText7"
+        android:layout_alignLeft="@+id/editText7"
+        android:layout_alignStart="@+id/editText7"
+        />
+
+    <TextView
+        android:layout_width="295dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="30dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/textView7"
+        android:layout_below="@+id/login"
+        android:layout_alignRight="@+id/login"
+        android:layout_alignEnd="@+id/login"
+        android:textAlignment="center"
+        android:textColor="#e61c1c" />
+
+
+</RelativeLayout>

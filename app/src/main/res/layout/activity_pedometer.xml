@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.neutron.fitude.Pedometer">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="416dp"
+        android:layout_height="111dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/toggle"
+        style="@android:style/Widget.Material.Button.Borderless"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="togglePedometer"
+        android:text="START"
+        android:layout_alignParentBottom="true"
+        />
+
+    <Button
+        android:id="@+id/reset"
+        style="@android:style/Widget.Material.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetPedometer"
+        android:text="RESET"
+        tools:layout_editor_absoluteY="3dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="6dp"
+        android:text="Distance"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Average Speed"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/speed"
+        android:layout_marginTop="47dp"
+        android:text="Calories"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/distanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/distance"
+        android:layout_alignParentEnd="true"
+        android:text="0.0 km"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/speedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calories"
+        android:layout_alignParentEnd="true"
+        android:text="0.0 m/s"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/caloriesValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/calories"
+        android:layout_alignParentEnd="true"
+        android:text="0.0 cals"
+        android:textSize="24sp" />
+
+</RelativeLayout>
